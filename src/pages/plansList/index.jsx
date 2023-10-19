@@ -44,7 +44,7 @@ export const PlansList = () => {
         <Box position="sticky" zIndex={99} top={0} bgcolor="#fff" p={3}>
           <Button
             variant="contained"
-            color="error"
+            color="warning"
             fullWidth
             onClick={() => setHide((p) => !p)}
           >
@@ -63,6 +63,19 @@ export const PlansList = () => {
               </Typography>
             </Box>
           ))}
+        </Box>
+        <Box bgcolor="#fff" p={3}>
+          <Button
+            variant="contained"
+            color="error"
+            fullWidth
+            onClick={() => {
+              localStorage.clear();
+              navigate('/');
+            }}
+          >
+            clear local storage
+          </Button>
         </Box>
       </Box>
     )
